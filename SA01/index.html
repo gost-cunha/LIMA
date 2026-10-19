@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SENAI-SP - Serviço Nacional de Aprendizagem Industrial">
+    <title>SENAI-SP</title>
+    <style>
+        /* Por que uso o rem ao invez de px: Responsividade e acho melhor */
+
+        /* Aplica no site em geral */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #102A30;
+        }
+
+        header {
+            width: 100%;
+            position: fixed;
+            /* Mantém o header fixo na tela */
+            display: flex;
+            /* Ativa o Flexbox */
+            justify-content: center;
+            /* Centraliza os elementos horizontalmente */
+            align-items: center;
+            /* Centraliza os elementos verticalmente */
+            flex-direction: column;
+            /* Organiza os elementos um em baixo do outro */
+            backdrop-filter: blur(1rem);
+            /* Filtro de blur/embaçado no fundo */
+        }
+
+        header .principal {
+            width: 100%;
+            padding: 1rem;
+            /* Espaçamento interno */
+            display: flex;
+            /* Ativa o Flexbox */
+            justify-content: space-between;
+            /* Separa os elementos horizontalmente */
+            align-items: center;
+            /* Centraliza os elementos verticalmente */
+            flex-direction: row;
+            /* Organiza os elementos lado a lado */
+        }
+
+        .principal {
+            display: flex;
+            gap: 0.5rem;
+            /* Espaçamento entre elementos */
+        }
+
+        .principal a {
+            color: white;
+            text-decoration: none;
+            /* Tirar underline padrão da tag <a></a> */
+            padding: 0.3rem 0.8rem;
+            background-color: #146B7A;
+            border-radius: 0.5rem;
+            /* Arredondamento de bordas */
+            border: none;
+            /* Remover borda/traçado do botão */
+            transition: 0.6s all;
+            /* Colocar uma suavidade quando vier o hover ou ser clicado */
+        }
+
+        .principal a:hover {
+            padding: 0.3rem 1rem;
+        }
+
+        .separador {
+            height: 0.1rem;
+            width: 98%;
+            background-color: #146B7A;
+            margin-top: 0.5rem;
+        }
+
+        section {
+            width: 100%;
+        }
+
+        .page1 {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 0.1rem solid rgba(255, 255, 255, 0.089);
+        }
+
+        img {
+            height: 30rem;
+            width: 60%;
+        }
+
+        .page2 {
+            height: 70vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            /* Organizar elementos um em baixo do outro */
+            gap: 5rem;
+            color: white;
+            border-bottom: 0.1rem solid rgba(255, 255, 255, 0.089);
+        }
+
+        .page2 div {
+            width: 90%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .page2 div h1 {
+            font-size: 3rem;
+        }
+
+        .page2 div a {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            background-color: #146B7A;
+            border-radius: 1rem;
+            text-decoration: none;
+            color: white;
+            font-size: 1.5rem;
+            transition: 0.6s all;
+        }
+
+        .page2 div a span {
+            transition: 0.6s all;
+        }
+
+        .page2 div a:hover {
+            background-color: #21717d;
+        }
+
+        .page2 div a:hover span {
+            font-size: 2rem;
+        }
+
+        .page3 {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: white;
+        }
+
+        .page3 h1 {
+            font-size: 3rem;
+        }
+
+        .page3 form {
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            flex-direction: column;
+            margin-top: 1rem;
+            padding: 1rem;
+            background-color: #146B7A;
+            border-radius: 1rem;
+        }
+
+        .page3 form input,
+        .page3 form textarea {
+            width: 100%;
+            border: none;
+            border-radius: 0.5rem;
+            padding: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Quando um input ou o textarea estiver focado, quando estiver sendo digitado */
+        .page3 form input:focus,
+        .page3 form textarea:focus {
+            outline: 0.1rem solid #102A30; /* Alterar outline que vem por padrão (tipo um traçado) */
+        }
+
+        .page3 form button {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.8rem;
+            border: none;
+            border-radius: 0.5rem;
+            background-color: #102A30;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer; /* Aparecer ponteiro do mouse quando passar em cima */
+            transition: 0.6s all;
+        }
+
+        .page3 form button span {
+            transition: 0.6s all;
+        }
+
+        .page3 form button:hover {
+            background-color: #162e33;
+        }
+
+        .page3 form button:hover span {
+            font-size: 1.5rem;
+        }
+
+        footer {
+            width: 100%;
+            border-top: 0.1rem solid rgba(255, 255, 255, 0.089);
+        }
+
+        footer .cima {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        footer .cima h1 {
+            font-size: 2.5rem;
+        }
+
+        footer .cima div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        footer .cima div a {
+            text-decoration: none;
+            color: rgb(201, 201, 201);
+        }
+
+        footer .cima div a:hover {
+            text-decoration: underline;
+            color: white;
+        }
+
+        footer .baixo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+            background-color: #146B7A;
+        }
+
+        footer .baixo p {
+            color: white;
+        }
+
+        .title {
+            color: #146B7A;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="principal">
+            <h1 class="title">SENAI</h1>
+            <nav>
+                <a href="index.html"><strong>Início</strong></a>
+                <a href="sobre.html">Sobre</a>
+                <a href="cursos.html">Cursos</a>
+            </nav>
+        </div>
+
+        <div class="separador"></div>
+    </header>
+
+    <main>
+        <section class="page1">
+            <img src="assets/banner.jpg" alt="Imagem do SENAI-SP">
+        </section>
+        <section class="page2">
+            <div>
+                <h1>Conheça sobre nós</h1>
+                <a href="sobre.html">
+                    <strong>Conhecer</strong>
+                    <span>→</span>
+                </a>
+            </div>
+
+            <div>
+                <h1>Conheça alguns cursos</h1>
+                <a href="cursos.html">
+                    <strong>Conhecer</strong>
+                    <span>→</span>
+                </a>
+            </div>
+        </section>
+        <section class="page3">
+            <h1>Contato</h1>
+            <form>
+                <label>
+                    <strong>Email:</strong>
+                </label>
+                <input type="email" placeholder="Digite o seu e-mail aqui">
+
+                <label>
+                    <strong>Motivo:</strong>
+                </label>
+                <input type="text" placeholder="Digite o motivo do contato aqui">
+
+                <label>
+                    <strong>Sobre:</strong>
+                </label>
+                <textarea name="bio" rows="10" cols="100" placeholder="Fale um pouco sobre..."></textarea>
+
+                <button type="submit">
+                    <strong>Enviar</strong>
+                    <span>✓</span>
+                </button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="cima">
+            <h1 class="title">SENAI</h1>
+            <div>
+                <a href="index.html">Início</a>
+                <a href="sobre.html">Sobre</a>
+                <a href="cursos.html">Cursos</a>
+            </div>
+        </div>
+        <div class="baixo">
+            <p>Copyright 2026 © Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SENAI-SP - Serviço Nacional de Aprendizagem Industrial">
+    <title>SENAI-SP - Sobre</title>
+    <style>
+        /* Por que uso o rem ao invez de px: Responsividade e acho melhor */
+
+        /* Aplica no site em geral */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #102A30;
+        }
+
+        header {
+            width: 100%;
+            position: fixed;
+            /* Mantém o header fixo na tela */
+            display: flex;
+            /* Ativa o Flexbox */
+            justify-content: center;
+            /* Centraliza os elementos horizontalmente */
+            align-items: center;
+            /* Centraliza os elementos verticalmente */
+            flex-direction: column;
+            /* Organiza os elementos um em baixo do outro */
+            backdrop-filter: blur(1rem);
+            /* Filtro de blur/embaçado no fundo */
+        }
+
+        header .principal {
+            width: 100%;
+            padding: 1rem;
+            /* Espaçamento interno */
+            display: flex;
+            /* Ativa o Flexbox */
+            justify-content: space-between;
+            /* Separa os elementos horizontalmente */
+            align-items: center;
+            /* Centraliza os elementos verticalmente */
+            flex-direction: row;
+            /* Organiza os elementos lado a lado */
+        }
+
+        .principal {
+            display: flex;
+            gap: 0.5rem;
+            /* Espaçamento entre elementos */
+        }
+
+        .principal a {
+            color: white;
+            text-decoration: none;
+            /* Tirar underline padrão da tag <a></a> */
+            padding: 0.3rem 0.8rem;
+            background-color: #146B7A;
+            border-radius: 0.5rem;
+            /* Arredondamento de bordas */
+            border: none;
+            /* Remover borda/traçado do botão */
+            transition: 0.6s all;
+            /* Colocar uma suavidade quando vier o hover ou ser clicado */
+        }
+
+        .principal a:hover {
+            padding: 0.3rem 1rem;
+        }
+
+        .separador {
+            height: 0.1rem;
+            width: 98%;
+            background-color: #146B7A;
+            margin-top: 0.5rem;
+        }
+
+        main {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        main .cima {
+            width: 98%;
+            height: 100vh;
+            margin-top: 5rem;
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            flex-direction: column;
+        }
+
+        main .cima h1 {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        main .cima div {
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            flex-direction: column;
+            margin-bottom: 3rem;
+        }
+
+        main .cima h2 {
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        main .cima p,
+        main .cima ul ol {
+            color: rgb(201, 201, 201);
+        }
+
+        main .baixo {
+            width: 100%;
+            height: 70vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        main .baixo iframe {
+            width: 98%;
+            height: 100%;
+            margin-bottom: 5rem;
+        }
+
+        footer {
+            width: 100%;
+            border-top: 0.1rem solid rgba(255, 255, 255, 0.089);
+        }
+
+        footer .cima {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        footer .cima h1 {
+            font-size: 2.5rem;
+        }
+
+        footer .cima div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        footer .cima div a {
+            text-decoration: none;
+            color: rgb(201, 201, 201);
+        }
+
+        footer .cima div a:hover {
+            text-decoration: underline;
+            color: white;
+        }
+
+        footer .baixo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+            background-color: #146B7A;
+        }
+
+        footer .baixo p {
+            color: white;
+        }
+
+        .title {
+            color: #146B7A;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="principal">
+            <h1 class="title">SENAI</h1>
+            <nav>
+                <a href="index.html">Início</a>
+                <a href="sobre.html"><strong>Sobre</strong></a>
+                <a href="cursos.html">Cursos</a>
+            </nav>
+        </div>
+
+        <div class="separador"></div>
+    </header>
+
+    <main>
+        <section class="cima">
+            <h1 class="title">O SENAI-SP</h1>
+            <div>
+                <h2>Conheça o SENAI-SP:</h2>
+                <p>O SENAI-SP tem a missão de impulsionar o aumento da competitividade da indústria por meio de ações de
+                    educação profissional, inovação, tecnologia, e empreendedorismo industrial. Com mais de 80 anos de
+                    atuação, o SENAI-SP supera 1 milhão de matrículas anuais, abrangendo desde cursos para a formação
+                    inicial profissional até a pós-graduação. São 90 unidades de formação profissional distribuídas em
+                    todo
+                    o estado de São Paulo, além de 78 escolas móveis, que levam soluções customizadas para a indústria.
+
+                    A instituição também se destaca na oferta de soluções em inovação e tecnologia, desenvolvendo
+                    projetos
+                    de pesquisa, desenvolvimento e inovação (PD&I) e programas voltados para a melhoria da produtividade
+                    e
+                    competitividade das empresas. Na área de empreendedorismo, o SENAI-SP promove programas de
+                    aceleração de
+                    startups, inovação aberta, intraempreendedorismo e fomento à cultura inovadora, atendendo empresas
+                    de
+                    todos os tamanhos e setores.
+                </p>
+            </div>
+            <div>
+                <h2>Missão:</h2>
+                <p>Promover o desenvolvimento sustentável do país, elevando a competitividade da indústria, por meio da
+                    educação profissional e da inovação e tecnologia.
+                </p>
+            </div>
+            <div>
+                <h2>Nossos Compromissos:</h2>
+                <ul>
+                    <ol>1. Formação para oportunidades reais de trabalho.</ol>
+                    <ol>2. Compromisso com o sucesso dos indivíduos e das empresas.</ol>
+                    <ol>3. Ampliação das oportunidades de acesso aos nossos serviços.</ol>
+                    <ol>4. Meritocracia baseada em oportunidades iguais para todos, equalizando diferenças que
+                        comprometem desempenhos e que provocam desperdício de competências e talentos.</ol>
+                    <ol>5. Liderança estratégica e responsável, influenciando positivamente todas as partes
+                        interessadas.</ol>
+                    <ol>6. Resultados crescentes e sustentabilidade. Respeitamos o direito das futuras gerações a um
+                        mundo melhor.</ol>
+                </ul>
+            </div>
+        </section>
+        <section class="baixo">
+            <iframe src="https://www.youtube.com/embed/J--7IsdWSwY?si=YV95ip8QmGLgt_6j" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+    </main>
+
+    <footer>
+        <div class="cima">
+            <h1 class="title">SENAI</h1>
+            <div>
+                <a href="index.html">Início</a>
+                <a href="sobre.html">Sobre</a>
+                <a href="cursos.html">Cursos</a>
+            </div>
+        </div>
+        <div class="baixo">
+            <p>Copyright 2026 © Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
