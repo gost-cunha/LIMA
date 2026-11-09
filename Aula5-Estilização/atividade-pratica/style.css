@@ -77,3 +77,75 @@ main section {
     height: 20vw;
     border-radius: 1rem;
 }
+
+.sobre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10vw;
+}
+
+.sobre h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.sobre p {
+    max-width: 800px;
+    text-align: center;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+.sobre h3 {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+}
+
+.sobre ul {
+    line-height: 2;
+    margin-bottom: 1.5rem;
+}
+
+.sobre strong {
+    color: #ffeb3b;
+}
+
+.cardapio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10vw;
+}
+
+.cardapio h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.cardapio table {
+    width: 100%;
+    max-width: 1000px;
+    border-collapse: collapse;
+    background-color: #e65100;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.cardapio th,
+.cardapio td {
+    padding: 1.2rem;
+    text-align: left;
+    border-bottom: 1px solid #ff8a50;
+}
+
+.cardapio th {
+    background-color: #ff1900;
+    font-size: 1.1rem;
+}
+
+.cardapio tr:hover {
+    background-color: #ff5722;
+}
